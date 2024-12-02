@@ -25,18 +25,12 @@
       box-sizing: border-box;
 }
 
-html {
-      font-size: 100%;
-}
-
 body {
       background-color: var(--background);
 
       color: var(--text);
 
       font-family: "Plus Jakarta Sans", sans-serif;
-
-      scroll-behavior: smooth;
 }
 
 a {
@@ -72,7 +66,7 @@ h2 {
 }
 
 h3 {
-      font-size: var(--font-medium);
+      font-size: var(--font-smallest);
       font-weight: 700;
 }
 
@@ -177,6 +171,91 @@ footer {
                   fill: var(--primary);
             }
       }
+}
+
+/* expérience pro */
+
+.container_exp {
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 100px;
+
+      position: relative;
+}
+
+.timeline {
+      width: 2px;
+      height: 110%;
+
+      position: absolute;
+
+      background-color: var(--text);
+
+      border-radius: var(--border-radius);
+}
+
+.card_exp_pro:nth-child(odd) {
+      align-self: flex-start;
+
+      border-width: 0 5px 5px 0;
+}
+
+.card_exp_pro:nth-child(even) {
+      align-self: flex-end;
+
+      border-width: 0 0 5px 5px;
+}
+
+.card_exp_pro {
+      background-color: transparent !important;
+
+      color: var(--text) !important;
+
+      border: solid var(--accent);
+}
+
+/* élément partagé par exp pro et formations */
+.card {
+      width: 40%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+
+      padding: 20px;
+
+      color: var(--background);
+
+      background-color: var(--primary);
+
+      box-shadow: var(--box-shadow);
+
+      border-radius: var(--border-radius);
+
+      span {
+            font-size: small;
+      }
+
+      p {
+            text-align: left;
+      }
+}
+
+/* formations */
+
+.container_formations {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10%;
 }
 
 /* projets */
